@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 30, 2021 at 06:13 AM
+-- Generation Time: Aug 30, 2021 at 07:45 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -20,41 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `scooby`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `donor`
---
-
-CREATE TABLE `donor` (
-  `donor_id` int(100) NOT NULL,
-  `name` varchar(100) DEFAULT NULL,
-  `father_name` varchar(100) DEFAULT NULL,
-  `gender` varchar(100) DEFAULT NULL,
-  `dob` varchar(100) DEFAULT NULL,
-  `body_weight` varchar(100) DEFAULT NULL,
-  `email` varchar(100) DEFAULT NULL,
-  `blood_group` varchar(40) DEFAULT NULL,
-  `state` varchar(100) DEFAULT NULL,
-  `city` varchar(100) DEFAULT NULL,
-  `address` varchar(200) DEFAULT NULL,
-  `pincode` varchar(100) DEFAULT NULL,
-  `phone` varchar(100) DEFAULT NULL,
-  `image` varchar(255) DEFAULT NULL,
-  `username_fk` varchar(100) NOT NULL,
-  `status` int(12) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `donor`
---
-
-INSERT INTO `donor` (`donor_id`, `name`, `father_name`, `gender`, `dob`, `body_weight`, `email`, `blood_group`, `state`, `city`, `address`, `pincode`, `phone`, `image`, `username_fk`, `status`) VALUES
-(11, 'Shar', 'Ahammed', 'male', '03/08/2018', '34Kg', 'admin@gmail.com', 'O+', 'Kandyd', 'Thihariyass', '34#', '0778650336', 'Kandy', 'upload/11_1521639011.jpg', 'codeprojects', 1),
-(13, 'nizam', 'nizam', 'male', '03/26/2018', '34Kg', 'codeprojects@gmail.com', 'B+', 'Kandyd', 'Thihariyass', '34#', '778650336', 'cxczxcxvxcvc', 'upload/394839_1521640578.jpg', 'super admin', 1),
-(15, 'Today', 'Today', 'female', '03/14/2018', '134kg', 'today@gmail.com', 'AB+', 'Kandyd', 'Thihariyass', '4567', '0778665443', 'Amapara', 'upload/hire-php-developer-mumbai-india-ezeelive-technologies_1521645495.png', 'today', 1),
-(17, 'Thursday', 'Thursday', 'male', '03/22/2018', '100Kg', 'Thursday@gmail.com', 'A+', 'Kandyd', 'Thihariyass', 'TH78', '778650336', 'ThursdayThursday', 'upload/Asian_Games_logo.svg_1521689309.png', 'super admin', 1);
 
 -- --------------------------------------------------------
 
@@ -79,7 +44,7 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`member_id`, `name`, `username`, `password`, `email`, `phone`, `address`, `usertype`, `profile`) VALUES
-(16, 'Udit Gupta', 'udit_admin', 'udit@123', 'udit@gmail.com', NULL, NULL, 'admin', 'upload/user5_1620571608.png');
+(16, 'Udit Gupta', 'udit_admin', '073db74214fbc5dfbb972a2803b61e68', 'udit@gmail.com', NULL, NULL, 'admin', '');
 
 -- --------------------------------------------------------
 
@@ -155,13 +120,6 @@ INSERT INTO `userreg` (`user_ID`, `Name`, `Email`, `Mobile`, `ACC_TYPE`, `Gender
 --
 
 --
--- Indexes for table `donor`
---
-ALTER TABLE `donor`
-  ADD PRIMARY KEY (`donor_id`,`username_fk`),
-  ADD KEY `member` (`username_fk`);
-
---
 -- Indexes for table `member`
 --
 ALTER TABLE `member`
@@ -176,12 +134,6 @@ ALTER TABLE `requester`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `donor`
---
-ALTER TABLE `donor`
-  MODIFY `donor_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `member`
