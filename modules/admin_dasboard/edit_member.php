@@ -4,6 +4,7 @@
 	$id = $_GET['member_id'];
 
 	$name = $_POST['name'];
+	$password = md5($_POST['password']);
 	$type = $_POST['type'];
 
 	$fileInfo = PATHINFO($_FILES["photo"]["name"]);
@@ -27,6 +28,6 @@
 		}
 	}
 
-	$update = $connection->query("UPDATE member SET name = '$name', usertype='admin', profile='$location' WHERE member_id='$id'");
+	$update = $connection->query("UPDATE member SET name = '$name', password='$password', profile='$location' WHERE member_id='$id'");
 	header('location:members.php');
 ?>

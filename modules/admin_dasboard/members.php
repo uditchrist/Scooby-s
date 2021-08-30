@@ -86,11 +86,11 @@
            <input type="text" name="name" id="name" class="form-control" value="<?php echo $row['name']?>"></input>
          </div>
           <div class="form-group">
-           <input type="text" name="username" id="username" class="form-control" value="<?php echo $row['username']?>" disabled=""></input>
+           <input type="text" name="username" id="username" class="form-control" value="<?php echo $row['username']?>" ></input>
          </div>
 
           <div class="form-group">
-           <input type="text" name="password" id="password" class="form-control" disabled="" value="<?php echo $row['password']?>" ></input>
+           <input type="text" name="password" id="password" class="form-control" value="<?php echo $row['password']?>" ></input>
          </div>
          
          <div class="form-group">

@@ -4,8 +4,8 @@
 	
 
 	$username = $_POST['username'];
-	// $password = md5($_POST['password']);
-	$password = $_POST['password'];
+	$password = md5($_POST['password']);
+	// $password = $_POST['password'];
 
 	$login = $connection->query("SELECT * FROM member WHERE username='$username' AND password='$password'");
 	$login2 = $connection->query("SELECT * FROM userreg WHERE Email='$username' AND Password='$password'");
