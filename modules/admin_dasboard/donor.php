@@ -48,7 +48,7 @@
     </thead>
     <tbody>
       <?php
-      $members= $connection->query("SELECT * FROM userreg where admin_approval='0'");
+      $members= $connection->query("SELECT * FROM userreg where admin_approval='0' AND ACC_TYPE='Veterinaries'");
       while($row = $members->fetch_array()) {
        ?>
 

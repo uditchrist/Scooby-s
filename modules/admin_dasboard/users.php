@@ -28,18 +28,20 @@
   <table class="table table-bordered" id="donors">
     <thead>
       <tr>
-        <th>Name</th>    
-        <th>Father's Name</th>
-        <th>Blood Group</th>
-        <th>Gender</th>
+      <th>Name</th>    
         <th>Mobile</th>
         <th>Email</th>
+        <th>Account Type</th>
+        <th>Gender</th>
         <th>DOB</th>
+        <th>Address</th>
+        <th>State</th>
         <th>City</th>
         <th>Pin Code</th>
-        <th>Donor Status</th>
-        <th>Admin Status</th>
-        <th>ID Proof</th>
+        <th>Pin Code</th>
+       
+
+       
         <th>Action</th>
         
       </tr>
@@ -52,19 +54,17 @@
 
       	<tr>
         <td><?php echo $row['Name'];?></td>
-        <td><?php echo $row['Father_Name'];?></td>
-        <td><?php echo $row['Blood_Group'];?></td>
-        <td><?php echo $row['Gender'];?></td>
       	<td><?php echo $row['Mobile'];?></td>
-        <td><?php echo $row['Email'];?></td>
-        <td><?php echo $row['DOB'];?></td> 
-        <td><?php echo $row['Address'];?></td> 
-        <td><?php echo $row['Pin_Code'];?></td> 
-        <td><?php if($row['donor_status'] == '1') {echo 'True';} else{echo 'False';}?></td> 
-        <td><?php if($row['admin_approval'] == '1') {echo 'Waiting for admin';}
-            else if($row['admin_approval'] == '2'){echo 'Approved';}
-            else if($row['admin_approval'] == '3'){echo 'Rejected by Admin';}
-             else{echo 'Pending';} ?></td>        
+        <td><?php echo $row['Email'];?></td>  
+        <td><?php echo $row['ACC_TYPE'];?></td>
+      	<td><?php echo $row['Gender'];?></td>
+        <td><?php echo $row['DOB'];?></td>  
+        <td><?php echo $row['Address'];?></td>
+      	<td><?php echo $row['State'];?></td>
+        <td><?php echo $row['City'];?></td>    
+        <td><?php echo $row['Pin_Code'];?></td>      
+    
+             
         <td><a href="../upload/<?php echo $row['id_proof'];?>" download>Download</a></td>
        
               		

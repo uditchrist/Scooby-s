@@ -82,7 +82,7 @@
 
 						<li><a href="active_donors.php" class=""><i class="lnr lnr-alarm"></i> <span>Active Veterinaries</span></a></li>
 						<li><a href="users.php" class=""><i class="lnr lnr-alarm"></i> <span>All Users</span></a></li>
-						<li><a href="contactquery.php" class=""><i class="lnr lnr-alarm"></i> <span>Contact Queries</span></a></li>
+						<!-- <li><a href="contactquery.php" class=""><i class="lnr lnr-alarm"></i> <span>Contact Queries</span></a></li> -->
 						
 					</ul>
 				</nav>

@@ -79,7 +79,7 @@
 						<li><a href="user_dashboard.php" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
 						<!-- <li><a href="search_donor.php" class=""><i class="lnr lnr-code"></i> <span>Search Donor</span></a></li> -->
 						<li><a href="patient_request.php" class=""><i class="lnr lnr-chart-bars"></i> <span>Patient request</span></a></li>
-						<li><a href="request_status.php" class=""><i class="lnr lnr-chart-bars"></i> <span>My Request status</span></a></li>
+						<!-- <li><a href="request_status.php" class=""><i class="lnr lnr-chart-bars"></i> <span>My Request status</span></a></li> -->
 						<!-- <li><a href="donor.php" class=""><i class="lnr lnr-chart-bars"></i> <span>Become a Donor</span></a></li>					 -->
 						
 					</ul>

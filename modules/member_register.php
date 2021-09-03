@@ -56,7 +56,12 @@
 	if($insert){
 		$_SESSION['success'] = '';
 		// alert('Registration Successful! You can login now');
-		header('location:./index.php');
+		// header('location:./index.php');
+
+		echo "<SCRIPT> 
+        window.alert('Registration Successful! You can login now');
+        window.location.href='./index.php';
+    </SCRIPT>";
 	}else { ?>
 	<div class="alert alert-success" style="background-color: red; color: white;">
     <strong>ERROR!</strong> This alert box could indicate a successful or positive action.
