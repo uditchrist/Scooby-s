@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scooby's Shelter</title>
+    <link rel="icon" type="image/x-icon" href="images/scoobySmallLogo.png" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+        .small-img-group{
+            display: flex;
+            justify-content: space-between;
+        }
+        .small-img-col{
+            flex-basis: 24%;
+            cursor: pointer;
+        }
+        .small-img{
+            height: 100px;
+        }
+    </style>
+
+
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    
+    /* The Modal (background) */
+    .modal {
+      display: none; /* text by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+    
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/scoobyLogo.jpg"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html" >HOME</a></li>
+                    <li><a href="about.html" >ABOUT US</a></li>
+                    <li><a href="Adopt.html" >ADOPTION</a></li>
+                    <li><a href="http://127.0.0.1:8080/login" target="_blank" >AID</a></li>
+                    <li><a href="donation.html" >Donate</a></li>
+                    <li><a href="contact.html" >CONTACT US</a></li>                   
+                    <li><a href="./modules/index.php" >LOGIN</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        
+        <h1 class="about_header">Dog Details</h1>
+
+    </section>
+
+    <section class="container breeddet my-5 pt-5">
+        <div class="row mt-5">
+            <div class="col-lg-5 col-md-12 col-12">
+                <img class="img-fluid w-100% pb-2" src="images/Bluetick dog/Bluetick 1.jpg" id="MainImg" alt="">
+
+                <div class="small-img-group">
+                    <div class="small-img-col">
+                        <img src="images/Bluetick dog/Bluetick 2.jpg" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/Bluetick dog/Bluetick 3.jpg" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/Bluetick dog/Bluetick 4.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/Bluetick dog/Bluetick 5.jpg" width="100%" class="small-img" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12 col-12">
+                <h6>Pet ID: 15647834</h6>
+                <h3>Breed: Bluetick</h3>
+                <h4>Location: Bangalore</h4>
+                
+                <button class="vw-btn" id="myBtn">Adopt Now</button>
+                
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <h1 align="center">Welcome to Scooby's Adoption Module!</h1>
+                     
+                      <form action="adopt.php" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label>Breed Name : Bluetick </label>
+                          <input type="hidden" value="Bluetick" class="form-control" name="bname" id="bname" placeholder="Enter Breed Name"></input>
+                        </div> 
+        
+                        <div class="form-group">
+                            <label>Name : </label>
+                          <input type="text"  class="form-control" name="name" id="name" placeholder="Enter Name"></input>
+                        </div>                        
+                        
+                        <div class="form-group">
+                          <label>Email : </label>
+                          <input type="text" class="form-control" id="email" name="email" placeholder="Email" required="">
+                      </div>
+                      <div class="form-group">
+                          <label>Mobile :</label>
+                          <input type="text"  class="form-control" id="Mobile" name="Mobile" placeholder="Mobile" required="">
+                      </div>
+                     
+                      <div class="form-group">
+                          <label>Upload any ID proof</label>
+                          <input type="file" class="form-control" name="up"></input>
+                      </div>    
+              
+              
+                        
+                        
+                      
+                      <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" name="addmember">Send</button>
+                      </div>
+                      </form>
+
+
+
+
+
+                    </div>
+                  
+                  </div>
+
+
+
+
+
+
+                
+                <h4>BREED DETAILS</h4>
+                <span>The sleekly beautiful Bluetick Coonhound is a sweet and affectionate charmer who might enjoy snoozing in the shade, but in pursuit of quarry he is relentless, bold, and single-minded. His off-the-charts prey drive must be channeled.
+                    Blueticks are speedy and compact nocturnal hunters named for the mottled (or 'ticked') black-and-blue pattern of the glossy coat. A large male can top out at 27 inches and 80 pounds; females are smaller. Blueticks are well-muscled but sleek and racy, never chunky or clumsy. The baying, bawling, and chopping bark of Blueticks might be cacophonous to some, but to coon hunters it's the music of the night.</span>
+            </div>
+        </div>
+        <br><br><br>
+        <h2 class="font-weight-bold">Similar pets</h2>
+            <hr>
+        <div class="row mx-auto container">
+            <div onclick="window.location.href='chihuahuaDet.html';" class="breed text-center col">
+               <img class="img-fluid mb-3" src="images/Chihuahua/chihuahua1.jpg" alt="">
+               <h5 class="p-name">Chihuahuak</h5>
+               <button class="vw-btn btn btn-dark">View</button>
+            </div>
+            <div onclick="window.location.href='bloodhoundDet.html';" class="breed text-center col">
+                <img class="img-fluid mb-3" src="images/Bloodhound/bloodhound1.jpg" alt="">
+                <h5 class="p-name">Bloodhound</h5>
+                <button class="vw-btn btn btn-dark">View</button>
+             </div>
+             <div onclick="window.location.href='bostonbullDet.html';" class="breed text-center col">
+                <img class="img-fluid mb-3" src="images/boston bull dog/boston bull 2.jpg" alt="">
+                <h5 class="p-name">Boston Bull</h5>
+                <button class="vw-btn btn btn-dark">View</button>
+             </div>
+             <div onclick="window.location.href='brittanyDet.html';" class="breed text-center col">
+                <img class="img-fluid mb-3" src="images/Brittany Spaniel/brittany_spaniel1.jpg" alt="">
+                <h5 class="p-name">Brittany Spaniel</h5>
+                <button class="vw-btn btn btn-dark">View</button>
+             </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <footer class="footer py-4">
+                  <div class="container">
+                      <div class="row align-items-center">
+                          <div class="col-lg-4 text-lg-left">Copyright © Scooby's Shelter 2021</div>
+                  <div class="social">     
+                  <a href="https://www.facebook.com/"><i class="fab fa-facebook-square" id="fb" aria-text="true"></i></a>
+                  <a href="https://www.instagram.com/"><i class="fab fa-instagram" id="yt" aria-text="true"></i></a>
+                  <a href="https://www.twitter.com/"><i class="fab fa-twitter-square" id="tw" aria-text="true"></i></a>
+                  <a href="https://www.linkedin.com/"><i class="fab fa-linkedin" id="gp" aria-text="true"></i></a>
+                </div>
+                          <div class="col-lg-4 text-lg-right">
+                              <a class="mr-3" href="#!">Privacy Policy</a>&nbsp;&nbsp;
+                              <a href="#!">Terms of Use</a>
+                          <a type="button" class="btn btn-warning" href="#">Back to top</a>
+                  </div>
+              </footer>
+            </section>
+
+<!-- JavaScript for Toggle Menu -->
+
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script>
+    var MainImg = document.getElementById('MainImg');
+    var smallimg = document.getElementsByClassName('small-img');
+
+    smallimg[0].onclick =function(){
+        MainImg.src = smallimg[0].src;
+    }
+    smallimg[1].onclick =function(){
+        MainImg.src = smallimg[1].src;
+    }
+    smallimg[2].onclick =function(){
+        MainImg.src = smallimg[2].src;
+    }
+    smallimg[3].onclick =function(){
+        MainImg.src = smallimg[3].src;
+    }
+</script>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+</body>
+</html>

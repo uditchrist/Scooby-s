@@ -78,6 +78,7 @@
 									<option value="">Choose</option>
 									<option value="User">Client</option>
 									<option value="Veterinaries">Veterinaries</option>
+									<option value="Adoption">Adoption</option>
 									<!-- <option value="Shelter Homes">Shelter Homes</option> -->
 									</select>
 									<span class="error" style="float:none" aria-live="polite"></span>

@@ -28,6 +28,10 @@
 			$_SESSION['userid'] = $fetch2['user_ID'];
 			$_SESSION['membername'] = $fetch2['Name'];
 			header('location:user_dashboard/user_dashboard.php');
+		} elseif ($fetch2['ACC_TYPE'] == 'Adoption')  {
+			$_SESSION['userid'] = $fetch2['user_ID'];
+			$_SESSION['membername'] = $fetch2['Name'];
+			header('location:adopt_dashboard/user_dashboard.php');
 		} 
 	}else {		
 			$_SESSION['err']="Invalid Username and Password";
